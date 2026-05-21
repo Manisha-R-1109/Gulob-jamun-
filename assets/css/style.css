@@ -1,0 +1,1136 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald&display=swap');
+
+* {
+    margin: 0;
+    border: none;
+    padding: 0;;
+}
+
+hr {
+    border: 2px solid brown;
+}
+
+/* h1 & logo */
+h1 {
+    font-family: Oswald, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    color: brown ; 
+}
+
+#logo {
+    float: left;
+    font-size: 230%;
+    margin-left: 30px; 
+    /*animates zoom effect of logo*/
+    animation-name: zoom;
+    animation-duration: 2s;  
+}
+
+/* nav-menu */
+
+#nav-menu {
+    font-size:115%;
+    letter-spacing: 3px;
+    color: brown;  
+    /*animates zoom effect on nav bar*/
+    animation-name: zoom;
+    animation-duration: 2s;  
+}
+
+#nav-menu, #logo {
+    line-height: 65px;
+    margin-bottom: 20px;
+}
+
+#nav-menu li {
+    float: right;
+    list-style-type: none;
+    margin-right: 30px;
+}
+
+#nav-menu a {
+    text-decoration: none;
+    color:inherit;
+    font-weight: bolder;
+
+}
+#nav-menu a:hover {
+    color: rgb(239, 155, 0);
+}
+
+.active {
+    border-bottom: 1px solid brown;
+}
+
+/* creates logo, nav-menu zoom effect*/
+
+@keyframes zoom {
+    from {
+transform:  scale(.1);
+    }
+    to {
+transform:  scale(1);
+    }
+}
+
+
+/*hero image & cover text*/
+
+#hero-outer {
+    height:815px;
+    width:100%;
+    overflow: hidden;
+    position:relative
+}
+
+#hero-image {
+    height:100%;
+    width:100%;
+    object-fit: contain;
+    background: url(../images/hero-image-large.jpg) no-repeat center;
+    background-size: cover;
+    /*animates raise effect on loading page*/
+    animation-name:hero-raise;
+    animation-duration: 2s;
+}
+
+#cover-text {
+    font-size: 130%;
+    font-family: oswald,sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    width: 100%;
+    height: 150px;
+    padding: 40px 10px;
+    box-sizing: border-box;
+    background-color: rgba(226, 132, 16, 0.7);
+    bottom: -20px;
+    position: absolute;
+    color:#fff;
+    /*animates drop effect on loading page*/
+    animation-name:cover-text-drop;
+    animation-duration: 2.75s;
+}
+
+/* creates hero-image-raise and cover-text-drop effects*/
+@keyframes hero-raise {
+    from {
+transform:translateY(+100%);
+    }
+    to {
+transform:translateY(0);
+    }
+}
+
+@keyframes cover-text-drop {
+    from {
+transform:translateY(-500%);
+    }
+    to {
+transform:translateY(0);
+    }
+}
+
+/* chefs*/
+
+#chefs-outer {
+    height: 600px;
+    width:100%;
+    position: relative; 
+    margin-top: 50px;
+} 
+
+#chefs-outer h2 {
+    text-align: center;
+    padding-top: 5px;
+    font-size: 250%;
+    margin-bottom: 10px;
+    color: brown;
+}
+
+#chefs-image {
+    background: url(../images/chefs-image-large.jpg) no-repeat center center ;
+    background-size: cover;
+    height: 80%;
+    width: 30%;
+    float: left;
+    border-radius: 15%;
+    border: 3px solid  brown ;
+    overflow: hidden;
+    margin-left: 30px;
+}
+
+#about-chef {
+    height: 70%;
+    width: 65%;
+    float: right;
+    padding: 10px;
+    box-sizing: border-box;
+    font-size: x-large;
+}
+
+#chef-welcome  {
+    font-size: 125%;
+    text-align: center;
+    color: brown;
+}
+
+/* testimonials */
+
+#testimonials-container {
+    text-align: center;
+    height:300px;
+    margin-top: 30px;
+    margin-left: 5px ;
+}
+
+#testimonials-container h2 {
+    text-align: center;
+    font-size: 200%;
+    margin-bottom: 15px;
+    color: brown;
+}
+
+#testimonials-container h3 {
+    color: black;
+    font-size: 125%;
+    font-weight: bolder;    
+    color: brown;
+}
+
+.review {
+    float: left;
+    width: 33%;
+    height: 150px;
+    background-image: linear-gradient( rgba(226, 72, 16, 0.7), rgba(193, 149, 92, 0.22));
+    border: 1px solid brown;
+    padding: 45px 0;
+    border-radius: 10px;
+    margin-left: 3px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* discount */
+
+#discount-outer {
+    text-align: center; 
+    margin: 2% 0;    
+}
+
+#discount-outer a {
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 150%;
+    /*animates flashing effect of discount link*/
+    animation: blinking 1.2s infinite;
+}
+
+#discount-outer a:hover {
+    color:orange;
+    animation: none;
+}
+
+/* creates flashing link*/
+
+@keyframes blinking {
+    0% {
+       color: orange;
+      }    
+    100% {
+      color: brown;
+    } 
+  }
+
+  
+/* footer */
+
+footer {
+    height: 150px;
+    text-align: center;
+    margin-top: auto ;
+    background-color: rgba(226, 132, 16, 0.2) ;
+    border-top: 3px solid brown;
+}
+
+.social-links ul {
+    float: left;
+}
+
+.social-links li {
+    display: inline;
+    text-align: center;
+    margin-left: auto;    
+} 
+
+.social-links i {
+    font-size: 300%;
+    color: brown;
+    margin: 2%;
+    padding: 0 5%;   
+}
+
+.social-links i:hover  {
+    color: orange;
+}
+
+footer a{
+    text-decoration: none;
+    color: brown;
+    font-size: 125%;
+}
+
+footer a:hover {
+    color: orange;
+}
+
+
+/* special page */
+
+/* todays special */
+
+#todays-special-outer {
+    clear: both;
+    min-height: 600px;
+    padding: 5% 0;
+    background-color: rgba(226, 132, 16, 0.2);
+    border-top: 3px solid brown;
+    border-bottom: 3px solid brown;
+}
+
+#todays-special-outer h2 {
+    font-size: 300%;
+    text-align: center;
+    /*animates flashing effect of heading text*/
+    animation: flashing-text 2s infinite;
+}
+
+#special-menu h2 {
+    font-size: 200%;
+    color: brown;
+    animation: none;
+}
+
+#special-menu {
+    width: 100%;
+    height: 400px;
+    padding: 0 1%;
+    box-sizing: border-box;
+    margin-top: 40px;
+}
+.special {
+    width: 45%;
+    padding: 0 10px;
+    height: 350px;
+    float: left;
+    margin: 0 2.5%;
+    box-sizing: border-box;
+    border: 4px solid brown;  
+    background-color: rgba(226, 132, 16, 0.2);
+    border-radius: 20px;
+    font-weight: bold;
+    /*animates sliding effect of special section*/
+    animation-name: slide-left;
+    animation-duration: 5s ;
+    transition: transform 1.2s;
+}
+.special:hover {
+    transform: scale(1.1);
+}
+
+#main-course-image {
+    background:url(../images/main-course-special.jpg) no-repeat center center;
+    height:80%;
+    background-size: cover;
+    width: 50%;
+    padding: 1%;
+    box-sizing: border-box;
+    float: left; 
+    border-radius: 20px;
+    border: 2px solid brown;
+}
+
+#main-course-text, #dessert-text {
+    width: 50%;
+    float: right;
+    box-sizing: border-box;
+    height: 100%;
+    padding: 2%;
+}
+
+.special p {
+    text-indent: 25px;
+}
+
+#dessert-image {
+    background:url(../images/dessert-special.jpg) no-repeat center center;
+    height:80%;
+    background-size: cover;
+    width: 50%;
+    padding: 1%;
+    box-sizing: border-box;
+    float: left; 
+    border-radius: 20px;
+    border: 2px solid brown;
+}
+
+#main-menu-link {
+    text-align: center;
+    font-size: 200%;
+}
+
+#main-menu-link a { 
+    text-decoration: none;
+    /*animates flashing effect of main menu link*/
+    animation: blinking 1.2s infinite;;
+}
+
+#main-menu-link a:hover {
+    animation: none;
+    color:orange;  
+}
+
+
+
+/* creates flashing text effect*/
+
+@keyframes flashing-text {
+    0% {
+        color: orange;
+    }
+    50% {
+        color: brown;
+    }
+    100% {
+         color: orange;
+    }
+    
+}
+
+/* creates sliding effect */
+
+@keyframes slide-left {
+    0% {
+transform:translateX(-500%);
+    }
+    50% {
+transform:translateX(0);
+    }
+    75% {
+transform:scale(1.1)        
+    }
+    100% {
+transform: scale(1);
+    }
+}
+
+/* menu-page */
+
+/* craving-tag */
+
+#craving-tag-outer {
+    text-align: center;
+    font-size: 150%;
+    clear: both;
+    padding:1% 0;
+    background-color: rgba(226, 132, 16, 0.2);
+    border-top: 3px solid brown;
+    border-bottom: 3px solid brown;
+    color: brown;
+    /*animates flashing effect of main menu link*/
+    animation: flashing-text 2s infinite;
+}
+
+#craving-tag-outer h2 {
+    /*animates sliding effect of craving-tag*/
+    animation-name: slide-left;
+    animation-duration: 2s ;
+}
+
+/* menu */
+
+#menu {
+    width: 100%;
+    text-align: center;
+    background-color: #fff;
+    padding: 1%;
+    box-sizing: border-box;
+}
+
+#menu h3 {
+    font-size: 200%;
+    color: brown;
+    font-weight:400;
+}
+
+#menu table {
+    background-color: rgba(226, 132, 16, 0.2);
+    width: 70%;
+    font-size: 1.25em;
+    font-weight: bold;
+    text-align: center;
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 25px auto;
+}
+
+#menu tr {
+    border: 2px solid brown; 
+}
+
+#menu tr:nth-child(even) {
+    background-color: rgba(224, 158, 76, 0.2) ;
+}
+
+#menu th {
+    background-color: brown;
+    color: white;
+}
+
+#menu th, td {
+    width:33%;
+}
+
+#menu select {
+    vertical-align: text-top;
+}
+
+#starters, #rice-bread,#main-course, #desserts {
+    /*animates sliding effect of tables*/
+    animation-name:table-left;
+    animation-duration: 2s;
+}
+
+#menu h3 {
+    /*animates sliding effect of table headings*/
+    animation-name:table-right;
+    animation-duration: 1.5s;
+}
+
+/* creates sliding effect*/
+
+@keyframes table-left {
+    from {
+transform:translateX(+100%);
+    }
+    to {
+transform:translateX(0);
+    }
+}
+
+@keyframes table-right {
+    from {
+transform:translateX(-100%);
+    }
+    to {
+transform:translateX(0);
+    }
+}
+
+
+/* pay button */
+
+#pay {
+    margin:20px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+#pay button {
+    background-color: rgba(226, 132, 16, 0.2);
+    font-size: 150%;
+    font-weight: bold;
+    padding:5px 10px;
+    border: 2px solid brown;
+    box-sizing: border-box;
+    border-radius: 10px;  
+    color: brown; 
+}
+
+#pay button:hover {
+    transform: scale(1.1);
+    color:blueviolet;
+}
+
+
+/* order page */
+
+#order-confimation-outer {
+    clear: both;
+    width: 100%;
+    height: 750px;
+    border-top: 3px solid brown ;
+    padding: 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#order-confirmation {
+    max-height: 300px;
+    max-width: 350px;
+    margin: 0 auto;
+    border: 3px solid brown;
+    padding: 5%;
+    box-sizing: border-box;
+    background-color:rgba(226, 132, 16, 0.2) ;
+}
+
+#feedback-request{
+    max-height: 150px;
+    width: auto;
+    border: 3px solid brown;
+    padding: 5%;
+    box-sizing: border-box;
+    background-color: rgba(226, 132, 16, 0.2);
+    margin-top: 50px;
+    font-size: large;
+    font-weight: bold;
+    color: brown;
+    letter-spacing: 1px;
+}
+
+
+
+/* signup-form page  */
+
+#signup-container {
+    clear: both;
+    width: 100%;
+    border-top: 3px solid brown ;
+    padding: 5%;
+    box-sizing: border-box;
+    height:800px;
+}
+
+#signup-outer {
+    background-color: rgba(224, 127, 8, 0.2);
+    max-width:600px ;
+    margin: auto auto 50px auto;
+    border: 5px solid brown;
+    padding: 2%;
+    box-sizing: border-box;
+    border-radius: 15px;
+    /*animates zoom effect of signup-box*/
+    animation-name: form-zoom;
+    animation-duration: 1s;
+}
+
+#signup-form {
+    background-color: rgba(226, 129, 11, 0.2);
+    max-height: 500px;
+    max-width: 500px;
+    border: 3px solid brown;  
+    padding: 5% ;
+    border-radius: 15px;
+    color: brown;
+}
+
+#signup-form p {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+#signup-form label{
+    font-size: 150%;
+    font-weight: bold;
+    color: brown;
+}
+
+#signup-form input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size:large;
+    color: brown;
+    border: 2px solid brown;
+    border-radius: 5px;
+    padding:2px;
+}
+
+#signup-form input:focus{
+    outline: none;
+    border-color: orange;
+    transform: scale(1.05);
+}
+
+#signup-form a{
+    text-decoration: none;
+    /*animates flashing effect of text*/
+    animation: flashing-text 2s infinite;
+}
+
+#signup-form a:hover,#signup-form button:hover  {
+    animation: none;
+    color:blueviolet;
+    transform: scale(1.1);
+}
+
+#signup-form button {
+    background-color: rgba(226, 132, 16, 0.2);
+    font-size: 125%;
+    font-weight: bold;
+    padding:5px 10px;
+    border: 3px solid brown;
+    box-sizing: border-box;
+    border-radius: 10px;   
+    color: brown        ;
+}
+
+/* creates zoom effect */
+
+@keyframes form-zoom {
+    0% {
+        transform: scale(0.25, 0.25);
+      }
+      100% {
+        transform: scale(1, 1);
+      }
+}
+
+
+/* login-form */
+
+#login-box-outer {
+    clear: both;
+    width: 100%;
+    height: 800px;
+    border-top: 3px solid brown ;
+    padding: 5%;
+    box-sizing: border-box;
+}
+
+#login-box {
+    max-height: 400px;
+    max-width:450px;
+    margin: 5% auto;
+    border: 3px solid brown;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color:rgba(226, 132, 16, 0.2) ;
+    color: brown;
+    font-size: x-large;
+    border-radius: 15px;
+}
+
+#login-box h3 {
+    font-size: xx-large;
+}
+
+#login-box input {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    font-size: larger;
+    color: brown;
+    border: 2px solid brown;
+    border-radius: 5px;
+    padding:2px;   
+}
+
+#login-box label {
+    font-size: 125%;
+    font-weight: bold;
+    color: brown;
+}
+
+#login-box button, #login-box a {
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+    /*animates flashing effect of text*/
+    animation: flashing-text 2s infinite;
+}
+
+#login-box button:hover,#login-box a:hover{
+    animation: none;
+    color:blueviolet;
+    transform: scale(1.1);
+}
+
+#login-box button {
+    display: block;
+    background-color: rgba(226, 132, 16, 0.2);
+    font-size: 110%;
+    font-weight: bold;
+    padding:5px 10px;
+    border: 3px solid brown;
+    box-sizing: border-box;
+    border-radius: 10px;  
+    margin: 10px 0; 
+}
+
+
+/* password reset */
+
+#password-reset-outer {
+    clear: both;
+    width: 100%;
+    height: 800px;
+    border-top: 3px solid brown ;
+    padding: 5%;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+#password-reset-box {
+    min-height: 500px;
+    width: auto;
+    border: 3px solid brown;
+    padding: 5%;
+    box-sizing: border-box;
+    background-color:rgba(226, 132, 16, 0.2) ;
+    font-size: x-large;
+}
+
+#password-reset-box h3 {
+    font-size: xx-large;
+    color: brown;
+}
+
+#password-reset-box a {
+    font-size: larger;
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+    /*animates flashing effect of text*/
+    animation: flashing-text 2s infinite;
+}
+
+#password-reset-box label{
+    font-size: 125%;
+    font-weight: bold;
+    color: brown;
+}
+
+#password-reset-box input {
+    max-width: 100%;
+    margin-bottom: 10px;
+    font-size: x-large;
+    color: brown;
+    border: 2px solid brown;
+    border-radius: 5px;
+    padding:2px;
+}
+
+#password-reset-box input:focus{
+    outline: none;
+    border-color: orange;
+    transform: scale(1.05);
+}
+
+#password-reset-box button:hover  {
+    animation: none;
+    color:blueviolet;
+    transform: scale(1.05);
+}
+
+#password-reset-box button {
+    background-color: rgba(226, 132, 16, 0.2);
+    font-size: 100%;
+    font-weight: bold;
+    padding:5px 10px;
+    border: 3px solid brown;
+    box-sizing: border-box;
+    border-radius: 10px;   
+    color: brown;
+}
+
+/* @media queries */
+
+/* For media screen size from 700px and above*/
+@media screen and (min-width:500px) {
+    #nav-menu a:hover {
+        font-size: x-large;
+    }    
+}
+
+/* For media screen size from 1200px wide and down*/
+@media screen and (max-width : 1200px) {  
+    #nav-menu {
+        clear: left;
+        float: left;
+        width: auto;
+        margin-left: 30px;
+        margin-bottom: 20px;
+        line-height: 25px; 
+    }
+
+    #hero-outer {
+        height:750px;
+    }
+    
+    #hero-image {
+        background: url(../images/hero-1200px.jpg) no-repeat center center;
+        background-size:cover ;
+    }
+
+    #cover-text {
+        font-size: 105%;
+    }
+
+    #chefs-image {
+         background: url(../images/chefs-1200px.jpg) no-repeat center center ;
+         background-size: cover;
+    }
+
+    #special-menu {
+        padding: 0;
+    }
+
+    .special {
+        margin: 0 2%;
+    }
+}
+
+
+/* For screen sizes 950px wide and down */
+@media screen and (max-width : 950px) {
+    #hero-image {
+        background: url(../images/hero-below-950px\ .jpg);
+        background-size: cover;
+    } 
+
+    #chefs-outer {
+        height: 1100px;
+        margin-top : 0;
+        padding: 5%;
+        box-sizing: border-box;
+    } 
+    
+    #chefs-image {
+        float: none;
+        clear: both;
+        background: url(../images/chefs-950px.jpg) no-repeat center center ;
+        background-size: cover;
+        height: 45%;
+        width: 90%;  
+        margin: 0 auto;  
+    }
+
+    #about-chef {
+        float: none;
+        clear: both;
+        height: 45%;
+        width: 90%;
+        padding-top: 30px;
+        box-sizing: border-box;
+        font-size: larger;
+        margin: auto;
+    }
+
+    #testimonials-container {
+        text-align: center;
+        height:500px;
+        margin-top: 30px;
+    }
+
+    .review {
+        float: none;
+        clear: both;
+        width: auto;
+        height: auto;
+        margin:10px;
+        padding: 20px;
+    }
+
+    #todays-special-outer {
+        clear: both;
+        width: 100%;
+        height: 1000px;
+        padding: 5% 0;
+        background-color: rgba(226, 132, 16, 0.2);
+        border-top: 3px solid brown;
+        border-bottom: 3px solid brown;
+        box-sizing: border-box;
+    }
+
+    #special-menu {
+        width: 100%;
+        height: 90%;
+        padding: 0 5%;
+        box-sizing: border-box;
+        margin: 25px;
+    }
+
+    .special {
+        width: 90%;
+        clear: both;
+        height: 45%;
+        margin-top: 40px;
+        box-sizing: border-box;
+    }
+
+    #main-course-image {
+        height:70%;
+        width: 50%;
+        padding: 1%;
+    }
+    
+    #main-course-text {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 2%;
+    }
+    
+    #dessert-image {
+        width: 50%;
+        padding: 1%;
+        box-sizing: border-box;
+        float: left; 
+        border-radius: 20px;
+        border: 2px solid brown;
+    }
+    
+    #dessert-text {
+        width: 50%;
+        float: right;
+        box-sizing: border-box;
+        height: 100%;
+        padding: 2%;
+    }
+
+    #signup-outer {
+        margin: auto auto 125px auto;
+    }
+}
+
+/* For screen sizes 700px wide and down */
+@media screen and (max-width:700px) {
+    #logo {
+        font-size: 200%;
+        text-align: center;
+        margin-left: 30px;
+        text-align: left;
+    }
+
+    #nav-menu {
+        margin-left: 30px ;
+        font-size: 80%;
+    }
+
+    #hero-outer {
+        height:500px;
+    }
+
+    footer {
+        height: 100px;
+    }
+
+    footer a {
+        font-size: 100%;
+    }
+
+    #cover-text {
+        font-size: 100%;
+        height: 175px;
+    }
+
+    #chefs-image {
+        background: url(../images/chef-below-700px.jpg) no-repeat center center ;
+        background-size: cover ;
+        margin :0 auto ;
+        height: 325px;
+    }
+
+    #todays-special-outer { 
+        height: 1400px;
+    }
+
+    .special {
+        margin:50px auto;
+        height: 45%;
+        float: none;
+        clear: both;
+    }
+
+    #special-menu {
+        height: 90%;
+        width: 100%;
+        margin:0;
+    }
+
+    #main-course-image, #dessert-image {
+        width: 100%;
+        height:40%;
+        float: none;
+        clear: both;
+    }
+
+    #main-course-text, #dessert-text {
+        width: 100%;
+        float: none;
+        box-sizing: border-box;
+        padding: 5%;
+    }
+
+    #todays-special-outer h2 {
+        font-size: 175%;
+    } 
+}
+
+/* For smaller screen sizes below 375px */
+@media screen and (max-width:374px) {
+    #logo {
+        font-size: 175%;
+        text-align: center;
+        margin:0;
+    }
+
+    #nav-menu {
+        margin:0;
+        padding: 5px 5px 5px 10px;
+        box-sizing: border-box;
+        letter-spacing: 1px;
+    }
+
+    #nav-menu li {
+        margin-right: 7px;
+        margin-left: 5px;
+    }
+
+    #cover-text {
+        font-size: 75% ;
+    }
+
+    #chefs-outer {
+        height: 1200px;
+        padding: 1%;
+    }
+
+    #chefs-image {
+        width: 95%;
+    }
+
+    #about-chef {
+        width: 95%;
+    }
+
+    #testimonials-container {
+        height:550px;
+    }
+
+    #todays-special-outer { 
+        height: 1600px;
+    }
+
+    #special-menu {
+        height:95%;
+    }
+
+    #signup-form p {
+        font-size: large;
+        font-weight: bold;
+    }
+    
+    #signup-form label{
+        font-size: 125%;
+    }
+
+    #signup-outer {
+        margin: auto auto 200px auto;
+    }
+}
